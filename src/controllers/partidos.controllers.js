@@ -3,7 +3,7 @@ import Partidos from "../models/Partidos.js"
 import Equipos from "../models/Equipos.js"
 
 export async function getPartidos() {
-  let betPartidos = await Partidos.findAll();
+  let betPartidos = await Partidos.findAll({ order: [["dia", "asc"]]});
   return betPartidos;
 }
 
