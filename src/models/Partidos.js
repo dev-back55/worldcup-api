@@ -40,6 +40,9 @@ const Partidos = sequelize.define(
     flag_b: {
       type: DataTypes.STRING,
     },
+    canaltv: {
+      type: DataTypes.STRING,
+    },
   },
   { timestamps: false }
 );
