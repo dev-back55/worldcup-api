@@ -1,6 +1,8 @@
 import { Op } from "sequelize";
-import Partidos from "../models/Partidos.js"
-import Equipos from "../models/Equipos.js"
+import Partidos from "../models/Partidos.js";
+import Equipos from "../models/Equipos.js";
+import Octavos from "../models/Octavos.js";
+import Cuartos from "../models/Cuartos.js";
 
 export async function getPartidos() {
   let betPartidos = await Partidos.findAll({ order: [["dia", "asc"]]});
@@ -17,3 +19,12 @@ export async function getPaises() {
   return betPaises;
 }
 
+export async function getOctavos() {
+  let betOctavos = await Octavos.findAll({ order: [["dia", "asc"]]});
+  return betOctavos;
+}
+
+export async function getCuartos() {
+  let betCuartos = await Cuartos.findAll({ order: [["dia", "asc"]]});
+  return betCuartos;
+}
