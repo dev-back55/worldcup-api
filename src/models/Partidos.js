@@ -43,6 +43,9 @@ const Partidos = sequelize.define(
     canaltv: {
       type: DataTypes.STRING,
     },
+    resumen_url: {
+      type: DataTypes.STRING,
+    },
   },
   { timestamps: false }
 );
