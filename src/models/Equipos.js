@@ -22,6 +22,14 @@ const Equipos = sequelize.define(
     flagurl: {
       type: DataTypes.STRING,
     },
+    pj: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    pts: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
   },
   { timestamps: false }
 );
