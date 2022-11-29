@@ -20,11 +20,11 @@ export async function getPaises() {
 }
 
 export async function getOctavos() {
-  let betOctavos = await Octavos.findAll({ order: [["dia", "asc"]]});
+  let betOctavos = await Octavos.findAll({ order: [["dia", "asc"], ["horario", "asc"]]});
   return betOctavos;
 }
 
 export async function getCuartos() {
-  let betCuartos = await Cuartos.findAll({ order: [["dia", "asc"]]});
+  let betCuartos = await Cuartos.findAll({ order: [["dia", "asc"], ["horario", "asc"]]});
   return betCuartos;
 }
